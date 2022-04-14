@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-12-16 11:04:53 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0RFU0tUT1AtMzZRNlZKVjsyMDE5LTEyLTA4OzA0OjQ3OjM1IFBNOzI4MjY="/>
+        <attribute name="edited" value="TEVOT1ZPO0RFU0tUT1AtMzZRNlZKVjsyMDE5LTEyLTE2OzExOjA0OjUzIFBNOzEwOzI5NzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Program Menentukan Jenis Segitiga&quot;" newline="True"/>
+            <output expression="&quot;Note!! : &quot;" newline="True"/>
+            <output expression="&quot;x = sudut  di depaan sisi a&quot;" newline="True"/>
+            <output expression="&quot;y = sudut di depan sisi b&quot;" newline="True"/>
+            <output expression="&quot;z = sudut di depan sisi c&quot;" newline="True"/>
+            <output expression="&quot;Untuk memulai program ketik 0&quot;" newline="True"/>
+            <declare name="a, b, c, x, y, z, q" type="Integer" array="False" size=""/>
+            <input variable="q"/>
+            <while expression="q!=0">
+                <output expression="&quot;Kesalahan input, Program Dihentikan! Silahkan Coba Lagi!&quot;" newline="True"/>
+                <input variable="q"/>
+            </while>
+            <output expression="&quot;Program di mulai!&quot;" newline="True"/>
+            <output expression="&quot;Sisi A = &quot;" newline="True"/>
+            <input variable="a"/>
+            <output expression="&quot;Sisi B = &quot;" newline="True"/>
+            <input variable="b"/>
+            <output expression="&quot;Sisi C = &quot;" newline="True"/>
+            <input variable="c"/>
+            <assign variable="x" expression="arccos(((b^2)+(c^2)-(a^2))/(2*b*c))*180/3.14"/>
+            <output expression="&quot;Sudut x = &quot;&amp;x&amp;&quot; Derajat&quot;" newline="True"/>
+            <assign variable="y" expression="arccos(((a^2)+(c^2)-(b^2))/(2*a*c))*180/3.14"/>
+            <output expression="&quot;Sudut y = &quot;&amp;y&amp;&quot; Derajat&quot;" newline="True"/>
+            <assign variable="z" expression="arccos(((a^2)+(b^2)-(c^2))/(2*a*b))*180/3.14"/>
+            <output expression="&quot;Sudut z = &quot;&amp;z&amp;&quot; Derajat&quot;" newline="True"/>
+            <if expression="x=0||y=0||z=0">
+                <then>
+                    <output expression="&quot;Bangunan tersebut bukan segitiga!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="x!=x||y!=y||z!=z">
+                        <then>
+                            <output expression="&quot;Bangunan tersebut bukan segitiga!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="x=90">
+                                <then>
+                                    <output expression="&quot;Karena sudut x = 90 maka segitiga tersebut adalah segitiga siku - siku!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="y=90">
+                                        <then>
+                                            <output expression="&quot;Karena sudut y = 90 maka segitiga tersebut adalah segitiga siku - siku!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="z=90">
+                                                <then>
+                                                    <output expression="&quot;Karena sudut z = 90 maka segitiga tersebut adalah segitiga siku - siku!&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="x=y&amp;&amp;x!=z">
+                                                        <then>
+                                                            <output expression="&quot;Karena sudut x = sudut y maka segitiga tersebut adalah segitiga sama kaki!&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="x=z&amp;&amp;x!=y">
+                                                                <then>
+                                                                    <output expression="&quot;Karena sudut x = sudut z maka segitiga tersebut adalah segitiga sama kaki!&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="y=z&amp;&amp;y!=x">
+                                                                        <then>
+                                                                            <output expression="&quot;Karena sudut y = sudut z maka segitiga tersebut adalah segitiga sama kaki!&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="a!=b&amp;&amp;b!=c&amp;&amp;a!=c">
+                                                                                <then>
+                                                                                    <output expression="&quot;Karena tidak ada sudut yang sama maka segitiga tersebut adalah segitia sembarang!&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <output expression="&quot;Karena semua sudutnya sama maka segitiga tersebut adalah segitiga sama sisi!&quot;" newline="True"/>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Terimakasih!&quot;" newline="True"/>
+            <output expression="&quot;Semoga Bermanfaat!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
